@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Portfolio Builder</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section class="form-panel">
+        <h2>Your Info</h2>
+        <label
+          >Name: <input type="text" id="name-input" placeholder="Your Name"
+        /></label>
+        <label
+          >Bio: <textarea id="bio-input" placeholder="Short bio"></textarea>
+        </label>
+        <h2>Projects</h2>
+        <label
+          >Project Title:
+          <input type="text" id="project-title" placeholder="Project Title"
+        /></label>
+        <label
+          >Project Description:
+          <textarea
+            id="project-description"
+            placeholder="Project Description"
+          ></textarea>
+        </label>
+        <label
+          >Tech Used:
+          <input
+            type="text"
+            id="project-tech"
+            placeholder="e.g., HTML, CSS, JavaScript"
+        /></label>
+        <label
+          >Project Link:
+          <input type="url" id="project-link" placeholder="GitHub / Demo URL"
+        /></label>
+
+        <button id="add-project">Add Project</button>
+      </section>
+
+      <section class="preview-panel">
+        <div class="preview">
+          <h1 id="preview-name">Your Name</h1>
+          <p id="preview-bio">Short bio will appear here.</p>
+          <h2>Projects</h2>
+          <div id="projects-list"></div>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
