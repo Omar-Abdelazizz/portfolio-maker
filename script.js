@@ -16,9 +16,7 @@ bioInput.addEventListener("input", () => {
   document.getElementById("preview-bio").textContent =
     bioInput.value || "Short bio will appear here.";
 });
-// #######################################
-// #######################################
-// #######################################
+
 addProjectButton.addEventListener("click", () => {
   const title = projectTitle.value.trim();
   const description = projectDescription.value.trim();
@@ -46,24 +44,26 @@ addProjectButton.addEventListener("click", () => {
 
   const deleteBtn = projectCard.querySelector(".delete-btn");
   deleteBtn.addEventListener("click", () => {
-  projectCard.classList.add("rotate-out-center");
-  projectCard.addEventListener("animationend", () => {
-    projectCard.remove();
-    saveToLocalStorage(); // Important to update localStorage after deletion
-  }, { once: true });
+    projectCard.classList.add("rotate-out-center");
+    projectCard.addEventListener(
+      "animationend",
+      () => {
+        projectCard.remove();
+        saveToLocalStorage();
+      },
+      { once: true }
+    );
   });
 
   const editBtn = projectCard.querySelector(".edit-btn");
   editBtn.addEventListener("click", () => {
-    // Pre-fill the input fields with the current project data
     projectTitle.value = title;
     projectDescription.value = description;
     projectTech.value = techUsed;
     projectLink.value = link;
 
-    // Remove the current project card
     projectCard.remove();
-    saveToLocalStorage(); // Update localStorage after editing the card
+    saveToLocalStorage();
   });
 
   projectsList.appendChild(projectCard);
@@ -94,7 +94,7 @@ function saveToLocalStorage() {
 
 function loadFromLocalStorage() {
   const saved = localStorage.getItem("portfolioData");
-  if (!saved) return; 
+  if (!saved) return;
 
   const data = JSON.parse(saved);
 
@@ -119,11 +119,15 @@ function loadFromLocalStorage() {
 
     const deleteBtn = projectCard.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", () => {
-    projectCard.classList.add("rotate-out-center");
-    projectCard.addEventListener("animationend", () => {
-      projectCard.remove();
-      saveToLocalStorage();
-  }, { once: true });
+      projectCard.classList.add("rotate-out-center");
+      projectCard.addEventListener(
+        "animationend",
+        () => {
+          projectCard.remove();
+          saveToLocalStorage();
+        },
+        { once: true }
+      );
     });
 
     const editBtn = projectCard.querySelector(".edit-btn");

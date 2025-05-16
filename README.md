@@ -31,4 +31,3 @@ All animations are generated using [Animista.net](https://animista.net/).
 2. Type your name and bio — they will appear in the preview.
 3. Fill in project details and click "Add Project".
 4. Your data is saved automatically.
-
